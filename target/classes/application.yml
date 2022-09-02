@@ -1,0 +1,39 @@
+#注意每个配置项的冒号后必须有空格
+#注意每个配置项的冒号后必须有空格
+#注意每个配置项的冒号后必须有空格
+
+server:
+  #服务器端口
+  port: 8081
+
+#企业微信信息
+enterprise:
+  #企业应用ID
+  agentId: 1000002
+  #企业应用Isecret
+  secret: 'vI6EbrkTjsVc_BduxRohx_nptav1sx_gUdPD7uKPWFo'
+  #企业ID
+  corpId: 'wwb1b9bd3182cafb09'
+
+
+#天行数据相关
+tianApi:
+  #天行数据key
+  tianApiKey: '4fe73488e9fccadbf8342912530a5d6e'
+  #星座
+  XingZuoVlaue: ''
+  #目标城市ID(推荐) 城市名
+  WeatherVlaue: 441702
+
+
+#推送目标信息
+weixin:
+  #推送目标企业微信账号，多个接收者请用|分隔，例如 "user1ID|user2ID"
+  userIds: "d41d8cd98f00b204e9800998ecf8427e"
+
+target:
+  #日期格式必须为yyyy-MM-dd
+  #生日
+  birthday: 1998-08-26
+  #恋爱日期
+  romanticDate: 2022-08-26

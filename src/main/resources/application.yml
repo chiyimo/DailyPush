@@ -11,25 +11,25 @@ enterprise:
   #企业应用ID
   agentId: 1000002
   #企业应用Isecret
-  secret: ''
+  secret: 'vI6EbrkTjsVc_BduxRohx_nptav1sx_gUdPD7uKPWFo'
   #企业ID
-  corpId: ''
+  corpId: 'wwb1b9bd3182cafb09'
 
 
-#天行数据相关，如果不需要则留空空
+#天行数据相关
 tianApi:
   #天行数据key
-  tianApiKey: ''
+  tianApiKey: '4fe73488e9fccadbf8342912530a5d6e'
   #星座
-  XingZuoVlaue: ''
+  XingZuoVlaue: '巨蟹'
   #目标城市ID(推荐) 城市名
-  WeatherVlaue: 11010
+  WeatherVlaue: 441702
 
 
 #推送目标信息
 weixin:
   #推送目标企业微信账号，多个接收者请用|分隔，例如 "user1ID|user2ID"
-  userIds: ""
+  userIds: "d41d8cd98f00b204e9800998ecf8427e"
 
 target:
   #日期格式必须为yyyy-MM-dd

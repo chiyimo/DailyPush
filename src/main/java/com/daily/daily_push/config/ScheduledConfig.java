@@ -26,7 +26,7 @@ public class ScheduledConfig {
     /**
      * 每隔1小时提醒喝水
      */
-    @Scheduled(cron = "0 0 /1 ?")
+    @Scheduled(cron = "0 0 9,10,11,12,13,14,15,16,17,18,19,20 * * ? ")
     public void scheduledSendNewsMsg(){
         daily_push.sendNewsMsg();
     }

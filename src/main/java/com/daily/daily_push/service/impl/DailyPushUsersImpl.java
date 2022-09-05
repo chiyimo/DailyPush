@@ -57,7 +57,7 @@ public class DailyPushUsersImpl implements DailyPushUsersService {
         ParameterListVo parameterList = getParameterList();
         String title = "";
 
-        //消息内容，微信显示不了太多，不要弄太多了
+
         //微信小表情网站：https://www.emojiall.com/zh-hans/platform-wechat
         StringBuffer message = new StringBuffer();
         if(parameterList.getCountBirthday() == 0){
@@ -68,6 +68,7 @@ public class DailyPushUsersImpl implements DailyPushUsersService {
             //设置标题
             title = "\uD83C\uDF08早安~        " +parameterList.getWeatherVo().getDate() + " " + parameterList.getWeatherVo().getWeek();
 
+            //消息内容，微信显示不了太多，不要弄太多了
             message.append("\uD83C\uDFF0城市：").append(parameterList.getWeatherVo().getArea());
             message.append("\n\uD83C\uDF25天气：").append(parameterList.getWeatherVo().getWeather());
             message.append("\n\uD83C\uDF21当前温度：").append(parameterList.getWeatherVo().getReal());
@@ -101,7 +102,7 @@ public class DailyPushUsersImpl implements DailyPushUsersService {
         //设置卡片跳转链接
         String url = "https://www.yuque.com/docs/share/00269daa-1dcb-402a-bb2a-9f838984443d?# 《企业微信每日早安推送操作流程》";
 
-        //推送用户
+        //循环推送多个用户
         sendMessage.sendTextcardMsg(userIds,title,message.toString(),url);
     }
 
@@ -115,10 +116,7 @@ public class DailyPushUsersImpl implements DailyPushUsersService {
     public void sendNewsMsg() {
         //设置卡片跳转链接
         String url = "https://www.yuque.com/docs/share/00269daa-1dcb-402a-bb2a-9f838984443d?# 《企业微信每日早安推送操作流程》";
-		//图文消息的图片地址，最长2048字节，支持JPG、PNG格式，较好的效果为大图 1068*455，小图150*150。（在resources/image文件夹下有放，可以把他上传到阿里云、腾讯云的对象存储中使用）
-		//必填
-        String imgUrl = "http://";
-		//参数一：推送用户的ID；参数二：图文消息的标题；参数三：描述；参数四：点击后跳转的链接；参数五：图片地址
+        String imgUrl = "https://wechat-push.oss-cn-hangzhou.aliyuncs.com/%E5%96%9D%E6%B0%B4%E5%B0%8F%E5%8A%A9%E6%89%8B.jpg";
         sendMessage.sendNewsMsg(userIds, "喝水提醒", "温馨提示：适量喝水可以促进新陈代谢，润泽皮肤和咽喉噢~", url, imgUrl);
     }
 

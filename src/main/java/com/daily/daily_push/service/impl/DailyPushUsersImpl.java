@@ -116,7 +116,8 @@ public class DailyPushUsersImpl implements DailyPushUsersService {
     public void sendNewsMsg() {
         //设置卡片跳转链接
         String url = "https://www.yuque.com/docs/share/00269daa-1dcb-402a-bb2a-9f838984443d?# 《企业微信每日早安推送操作流程》";
-        String imgUrl = "https://wechat-push.oss-cn-hangzhou.aliyuncs.com/%E5%96%9D%E6%B0%B4%E5%B0%8F%E5%8A%A9%E6%89%8B.jpg";
+		//图片地址
+        String imgUrl = "";
         sendMessage.sendNewsMsg(userIds, "喝水提醒", "温馨提示：适量喝水可以促进新陈代谢，润泽皮肤和咽喉噢~", url, imgUrl);
     }
 
